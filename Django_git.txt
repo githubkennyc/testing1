@@ -1,0 +1,41 @@
+******** github **********
+
+find the folder you want to work on, right click to open the option 'use gitbash', click on that to open command promp.
+
+use <git ini> to set up this folder for github.
+
+use <git config --global user.name 'your name'>
+    <git confif --global user.email 'emailaddress' > 
+
+use <git add filename.ext> to add the file to be ready for deposit
+    <git add . (/*.html)  (/*.txt)> to add all files
+    
+use <git rm --cached filename.ext> to remove a file from deposit pool
+    
+use <git commit -m 'say what was changed'> to save it to the depository
+
+use <touch filename> to create a file
+
+inside .gitignore file are files/folders you do not want to share. just add filename.ext or /foldername on each line.
+
+use <git branch mynewbranch> to create a branch of the project seperated from master untill merged.
+
+use <git checkout mynewbranch> to switch to the mynewbranch.
+    <git checkout master> back to master project
+    
+from master use <git merger mynewbranch> to merger two together.
+
+to deposit into github.com:
+log in to your github acc, click 'new depository', type whatever name you like.
+click create, then github will generate few lines of instructions
+copy/paste the 'git remote add origin http//...' to your git bash cmd line.
+after excute, copy/paste the 'git push -u origin master' to cmd line, excute.
+then will need to enter yout github log in name/pass
+
+after remote depository, any files updated and committed can be saved to depository
+use <git push>
+
+if you see a project on github you like, you can copy/clone it:
+click on clone to generate a http line, copy that line
+in the folder you want the project to be, click open with gitbash
+in cmd line, type <git clone (paste the line)> then the project will be copied to your folder.
