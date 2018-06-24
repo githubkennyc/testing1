@@ -39,3 +39,98 @@ if you see a project on github you like, you can copy/clone it:
 click on clone to generate a http line, copy that line
 in the folder you want the project to be, click open with gitbash
 in cmd line, type <git clone (paste the line)> then the project will be copied to your folder.
+
+when mutiple ppl working on a project, files will get changed constantly
+use <git pull> will download all changed files since last time.
+
+
+
+******************  django  **********************
+
+open cmd then type <pip install django> to install django on the system.
+
+<django-admin> for all cmd line keywords you can use.
+
+#create project
+CD to the directory you want your project to be.
+use <django-admin startproject yourprojectfolder> 
+CD to 'yourprojectfolder', this is your main folder to work on.
+
+<python manage.py runserver> to create a server locally to host your project.
+                             #will give you http://127.0.0.1:8000/ as your project website.
+                             <ctr+c> to break out
+127.0.0.1  refers to this local computer
+:          means port number after
+8000       refers to a port number where your project files communicate.
+
+#work between files/folders:
+
+besides all default files django created for you, some folder/files still needed:
+a template folder to store all html files. html controls the looks and have links to other pages.
+hub.py file with functions to take requests from url and run codes then connect to coresponding html files.
+
+in urls.py file, need to import hub.py because all names declared inside hub.py
+
+in urls.py, path('about/', hub.about, name='about')
+                 'about/' is when this word inside the address bar
+                 hub.about is use the .about function inside hub.py
+                 name='about' give this path a name for refering anywhere in your project
+                 
+                 
+in hub.py, declare functions like:  
+                                    def home(request):
+                                        return render(request, 'home.html', {'keyword':dosomething})
+                                        
+
+=== html ===
+
+<a href="{% url 'about'%}">about</a>
+<a.../a>   a link
+href   hyper reference link: "  "
+{% url 'about' %}   standard sytax stating which url this link is point to.  'about' is the name attribute in path()
+about   this about is what you want to appear on the link button.
+
+
+{{ usertext }}  inside a html file
+{{  }}   is the syntax used for accessing calling function's member attributes
+usertext  is a member attribute declared inside he calling function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
